@@ -1,0 +1,127 @@
+{
+  "form_title": "Entrevista de Desligamento 2025",
+  "description": "Sua opinião é muito importante para nós. Esta entrevista nos ajudará a melhorar a experiência de trabalho para os colaboradores que continuam na empresa. Suas respostas são confidenciais.",
+  "sections": [
+    {
+      "title": "Dados do Desligamento",
+      "fields": [
+        {
+          "type": "date",
+          "question": "Data de admissão:"
+        },
+        {
+          "type": "date", 
+          "question": "Data de desligamento:"
+        },
+        {
+          "type": "dropdown",
+          "question": "Qual era sua sede?",
+          "options": ["São Paulo", "Rio de Janeiro", "Brasília", "Recife", "Porto Alegre"]
+        },
+        {
+          "type": "dropdown",
+          "question": "Qual era seu cargo?",
+          "options": ["Analista Jr", "Analista Pl", "Analista Sr", "Coordenador", "Supervisor", "Gerente", "Diretor"]
+        },
+        {
+          "type": "dropdown",
+          "question": "Sua faixa etária?",
+          "options": ["18-25", "26-35", "36-45", "46-60+"]
+        },
+        {
+          "type": "number",
+          "question": "Número de faltas nos últimos 6 meses:",
+          "validation": "min: 0, max: 50"
+        },
+        {
+          "type": "dropdown",
+          "question": "Tipo de desligamento:",
+          "options": ["Voluntário", "Involuntário", "Justa Causa", "Acordo Mútuo"]
+        }
+      ]
+    },
+    {
+      "title": "Avaliação Retrospectiva - Satisfação no Trabalho",
+      "description": "Pensando no seu tempo na empresa, como avalia cada aspecto?",
+      "scale": "1-5 (1=Muito Insatisfeito, 5=Muito Satisfeito)",
+      "questions": [
+        "Q1: Satisfação com o trabalho que realizava",
+        "Q2: Nível de desafio e estímulo do trabalho",
+        "Q3: Autonomia para tomar decisões",
+        "Q4: Sensação de que o trabalho fazia diferença",
+        "Q5: Orgulho de trabalhar na empresa"
+      ]
+    },
+    {
+      "title": "Avaliação Retrospectiva - Recompensa e Crescimento",
+      "scale": "1-5 (1=Muito Insatisfeito, 5=Muito Satisfeito)",
+      "questions": [
+        "Q6: Justiça da remuneração comparada ao mercado",
+        "Q7: Adequação dos benefícios oferecidos",
+        "Q8: Oportunidades de crescimento na carreira",
+        "Q9: Frequência e qualidade do feedback recebido",
+        "Q10: Investimento da empresa no seu desenvolvimento"
+      ]
+    },
+    {
+      "title": "Avaliação Retrospectiva - Relacionamento com Gestor",
+      "scale": "1-5 (1=Muito Insatisfeito, 5=Muito Satisfeito)",
+      "questions": [
+        "Q11: Suporte recebido do gestor",
+        "Q12: Facilidade de comunicação com o gestor",
+        "Q13: Reconhecimento do bom trabalho pelo gestor",
+        "Q14: Clareza das orientações recebidas",
+        "Q15: Justiça nas decisões do gestor"
+      ]
+    },
+    {
+      "title": "Avaliação Retrospectiva - Equilíbrio Vida-Trabalho",
+      "scale": "1-5 (1=Muito Insatisfeito, 5=Muito Satisfeito)",
+      "questions": [
+        "Q16: Equilíbrio entre vida pessoal e profissional",
+        "Q17: Necessidade de trabalhar além do horário",
+        "Q18: Respeito da empresa ao tempo de descanso",
+        "Q19: Flexibilidade de horário",
+        "Q20: Nível de estresse com a carga de trabalho"
+      ]
+    },
+    {
+      "title": "Avaliação Retrospectiva - Ambiente de Trabalho",
+      "scale": "1-5 (1=Muito Insatisfeito, 5=Muito Satisfeito)",
+      "questions": [
+        "Q21: Adequação do ambiente físico",
+        "Q22: Disponibilidade de recursos para o trabalho",
+        "Q23: Relacionamento com colegas",
+        "Q24: Cooperação entre as áreas",
+        "Q25: Eficácia da comunicação interna"
+      ]
+    },
+    {
+      "title": "Questões Abertas",
+      "fields": [
+        {
+          "type": "textarea",
+          "question": "Qual foi o principal motivo que levou à sua saída?"
+        },
+        {
+          "type": "textarea",
+          "question": "O que a empresa poderia ter feito para retê-lo(a)?"
+        },
+        {
+          "type": "textarea",
+          "question": "Que sugestões deixa para melhorar a empresa?"
+        }
+      ]
+    },
+    {
+      "title": "Consentimento LGPD",
+      "fields": [
+        {
+          "type": "checkbox",
+          "question": "Autorizo o uso dos meus dados para fins de melhoria organizacional, conforme LGPD",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
