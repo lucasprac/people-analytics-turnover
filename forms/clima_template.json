@@ -1,0 +1,113 @@
+{
+  "form_title": "Pesquisa de Clima Organizacional 2025",
+  "description": "Queremos ouvir sua opinião sobre o ambiente de trabalho. Suas respostas são confidenciais e serão usadas apenas para melhorar nosso ambiente organizacional.",
+  "sections": [
+    {
+      "title": "Dados Demográficos",
+      "fields": [
+        {
+          "type": "dropdown",
+          "question": "Qual sua sede?",
+          "options": ["São Paulo", "Rio de Janeiro", "Brasília", "Recife", "Porto Alegre"]
+        },
+        {
+          "type": "dropdown",
+          "question": "Qual seu cargo?",
+          "options": ["Analista Jr", "Analista Pl", "Analista Sr", "Coordenador", "Supervisor", "Gerente", "Diretor"]
+        },
+        {
+          "type": "dropdown",
+          "question": "Sua faixa etária?",
+          "options": ["18-25", "26-35", "36-45", "46-60+"]
+        },
+        {
+          "type": "number",
+          "question": "Há quantos meses você trabalha na empresa?",
+          "validation": "min: 1, max: 600"
+        }
+      ]
+    },
+    {
+      "title": "Satisfação no Trabalho",
+      "scale": "1-5 (1=Discordo Totalmente, 5=Concordo Totalmente)",
+      "questions": [
+        "Q1: Sinto-me satisfeito(a) com o trabalho que realizo",
+        "Q2: Meu trabalho é desafiador e estimulante", 
+        "Q3: Tenho autonomia para tomar decisões no meu trabalho",
+        "Q4: Sinto que meu trabalho faz diferença na empresa",
+        "Q5: Tenho orgulho de trabalhar nesta empresa"
+      ]
+    },
+    {
+      "title": "Recompensa e Crescimento",
+      "scale": "1-5 (1=Discordo Totalmente, 5=Concordo Totalmente)",
+      "questions": [
+        "Q6: Minha remuneração é justa comparada ao mercado",
+        "Q7: Os benefícios oferecidos atendem minhas necessidades",
+        "Q8: Tenho oportunidades claras de crescimento na carreira",
+        "Q9: Recebo feedback regular sobre meu desempenho",
+        "Q10: A empresa investe no meu desenvolvimento profissional"
+      ]
+    },
+    {
+      "title": "Relacionamento com Gestor",
+      "scale": "1-5 (1=Discordo Totalmente, 5=Concordo Totalmente)",
+      "questions": [
+        "Q11: Meu gestor me dá suporte quando preciso",
+        "Q12: Sinto-me à vontade para conversar com meu gestor",
+        "Q13: Meu gestor reconhece meu bom trabalho",
+        "Q14: Recebo orientações claras sobre minhas responsabilidades",
+        "Q15: Meu gestor é justo nas suas decisões"
+      ]
+    },
+    {
+      "title": "Equilíbrio Vida-Trabalho",
+      "scale": "1-5 (1=Discordo Totalmente, 5=Concordo Totalmente)",
+      "questions": [
+        "Q16: Consigo equilibrar bem minha vida pessoal e profissional",
+        "Q17: Não preciso trabalhar além do meu horário regularmente",
+        "Q18: A empresa respeita meu tempo de descanso",
+        "Q19: Tenho flexibilidade de horário quando necessário",
+        "Q20: Não me sinto estressado(a) com a carga de trabalho"
+      ]
+    },
+    {
+      "title": "Satisfação com Ambiente",
+      "scale": "1-5 (1=Discordo Totalmente, 5=Concordo Totalmente)",
+      "questions": [
+        "Q21: O ambiente físico de trabalho é adequado",
+        "Q22: Tenho os recursos necessários para fazer meu trabalho",
+        "Q23: O relacionamento com colegas é positivo",
+        "Q24: Existe cooperação entre as áreas da empresa",
+        "Q25: A comunicação interna da empresa é eficaz"
+      ]
+    },
+    {
+      "title": "Questões Abertas",
+      "fields": [
+        {
+          "type": "textarea",
+          "question": "O que mais gosta de trabalhar nesta empresa?"
+        },
+        {
+          "type": "textarea",
+          "question": "O que sugere para melhorar o ambiente de trabalho?"
+        },
+        {
+          "type": "textarea",
+          "question": "Comentários adicionais:"
+        }
+      ]
+    },
+    {
+      "title": "Consentimento LGPD",
+      "fields": [
+        {
+          "type": "checkbox",
+          "question": "Autorizo o uso dos meus dados para fins de melhoria do ambiente organizacional, conforme Lei Geral de Proteção de Dados (LGPD)",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
