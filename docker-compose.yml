@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  # Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: people_analytics_db
+    environment:
+      POSTGRES_DB: people_analytics
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - people_network
+
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: people_analytics_api
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres123@postgres:5432/people_analytics
+      - PYTHONPATH=/app
+    depends_on:
+      - postgres
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+    networks:
+      - people_network
+    restart: unless-stopped
+
+  # Frontend Dashboard
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: people_analytics_frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+    networks:
+      - people_network
+    restart: unless-stopped
+
+  # Redis Cache (optional)
+  redis:
+    image: redis:7-alpine
+    container_name: people_analytics_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - people_network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  people_network:
+    driver: bridge
